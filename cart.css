@@ -1,0 +1,68 @@
+.all-product{
+    background-color: rgb(202, 240, 202);
+height:100px;
+width: 90;
+display: flex;
+justify-content: space-between;
+align-items: center;
+border:2px solid ;
+border-radius: 5px;
+margin: auto;
+box-shadow:2px 3px 4px  ;
+}
+.all-product img{
+    height:90px ;
+    width:100px ;
+
+}
+button{
+    color:white;
+    background-color: rgb(246, 123, 123);
+    margin-right:10px ;
+    
+}
+.delete-btn {
+    font-size: 18px;
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background-color: #ff4d4d;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    position: relative;
+    box-shadow: 0px 6px 0px #c74343, 0px 10px 15px rgba(0, 0, 0, 0.3);
+    transform-style: preserve-3d;
+    outline: none;
+}
+
+.delete-btn:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 90%;
+    height: 90%;
+    background-color: #ff3333;
+    border-radius: 10px;
+    transform: translateZ(-6px); /* This creates the 3D depth effect */
+    transition: all 0.2s ease;
+}
+
+.delete-btn:hover {
+    background-color: #ff6666;
+    box-shadow: 0px 4px 0px #c74343, 0px 8px 10px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
+}
+
+.delete-btn:active {
+    transform: translateY(6px);
+    box-shadow: 0px 2px 0px #c74343;
+}
+
+.delete-btn:active:before {
+    transform: translateZ(-2px);
+}

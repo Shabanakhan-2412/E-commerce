@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form action="" id="signupForm">
+        <div class="uncnt">
+            <input type="text" id="userName" name="un" placeholder="enter user name">
+            <p id="errorUnMsg"></p>
+        </div>
+        <div class="psdcnt">
+            <input type="password" id="pwd" name="pwd" placeholder="enter user name">
+            <p id="errorpwdMsg"></p>
+        </div>
+        <button>Submit</button>
+    </form>
+
+    <script>
+        let signupForm = document.getElementById("signupForm")
+        let userName = document.getElementById("userName")
+        let errorUnMsg = document.getElementById("errorUnMsg")
+        let pass = document.getElementById("pwd")
+        let errorpwdMsg = document.getElementById("errorpwdMsg")
+
+        userName.addEventListener("change",()=>{
+            // console.log("change")
+            if(userName.value == ""){
+                errorUnMsg.textContent="enter user name"
+                errorUnMsg.style.color="red"
+                
+            }
+            else{
+                errorUnMsg.textContent=""
+            }
+        })
+        
+        let userData = {
+            un: "",
+            pwd: ""
+        }
+
+        signupForm.addEventListener("submit", (e) => {
+            e.preventDefault();
+             let unInput=userName.value;
+             let password=pass.value;
+             userData.un=unInput;
+             userData.pwd=password;
+             console.log(userData)
+
+            console.log("submit")
+
+
+        })
+    </script>
+
+</body>
+
+</html>
